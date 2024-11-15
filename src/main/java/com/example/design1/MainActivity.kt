@@ -3,6 +3,7 @@ package com.example.design1
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.activity.enableEdgeToEdge
@@ -12,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -69,11 +70,14 @@ class MainActivity : AppCompatActivity() {
         // Create the ArrayAdapter and set it for the AutoCompleteTextView
         val adap_report = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, reportOptions)
         reportAutoComplete.setAdapter(adap_report)
+        reportAutoComplete.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                    reportAutoComplete.showDropDown()
 
-        // Set an OnClickListener to open the dropdown when clicked
-        reportAutoComplete.setOnClickListener {
-            reportAutoComplete.showDropDown()  // Manually show the dropdown
+            }
+            true
         }
+
 
         reportAutoComplete.setOnItemClickListener { parent, view, position, id ->
             val selectedReport = parent.getItemAtPosition(position) as String
