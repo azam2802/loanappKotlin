@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Design1</string>
+    <string-array name="types">
+        <item>Hello</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Bye</item>
+    </string-array>
+</resources>
