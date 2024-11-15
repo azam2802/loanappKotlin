@@ -59,10 +59,11 @@
     <Button
         android:id="@+id/addButton3"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/orange"
         android:fontFamily="@font/raleway_regular"
+        android:gravity="center"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="Добавить"
@@ -79,7 +80,6 @@
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_input">
 
@@ -89,12 +89,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#FFFFFF"
+            android:fontFamily="@font/raleway_regular"
+            android:gravity="center_vertical"
             android:inputType="none"
             android:paddingLeft="10dp"
             android:text="Types"
-            android:textColor="#8D97A0"
-            android:fontFamily="@font/raleway_regular"
-            />
+            android:textColor="#8D97A0" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
