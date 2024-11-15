@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main);
         val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.type_autoComplete)
-        val textInputLayout = findViewById<TextInputLayout>(R.id.type_input)
 
         // List of items for the dropdown
         val options = listOf("Option 1", "Option 2", "Option 3", "Option 4")
@@ -30,8 +29,12 @@ class MainActivity : AppCompatActivity() {
         autoCompleteTextView.setAdapter(adapter)
 
         // Set an OnClickListener to open the dropdown when clicked
-        autoCompleteTextView.setOnClickListener {
-            autoCompleteTextView.showDropDown()  // Manually show the dropdown
+        autoCompleteTextView.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                autoCompleteTextView.showDropDown()
+
+            }
+            true
         }
 
 //        // Optionally set an item click listener to handle item selection
@@ -41,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         val clientAutoComplete = findViewById<AutoCompleteTextView>(R.id.client_AutoComplete)
-        val clientInputLayout = findViewById<TextInputLayout>(R.id.client_input)
 
         // List of client names for the dropdown
         val clientOptions = listOf("Client A", "Client B", "Client C", "Client D")
@@ -51,8 +53,12 @@ class MainActivity : AppCompatActivity() {
         clientAutoComplete.setAdapter(adap)
 
         // Set an OnClickListener to open the dropdown when clicked
-        clientAutoComplete.setOnClickListener {
-            clientAutoComplete.showDropDown()  // Manually show the dropdown
+        clientAutoComplete.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                clientAutoComplete.showDropDown()
+
+            }
+            true
         }
 
 //        // Optionally set an item click listener to handle item selection
@@ -62,7 +68,6 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         val reportAutoComplete = findViewById<AutoCompleteTextView>(R.id.report_AutoComplete)
-        val reportInputLayout = findViewById<TextInputLayout>(R.id.report_input)
 
         // List of client names for the dropdown
         val reportOptions = listOf("Должники", "Сумма по типу", "Прибыль", "Этот месяц", "Погашено", "Кредит")
@@ -88,7 +93,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         val settingsAutoComplete = findViewById<AutoCompleteTextView>(R.id.settings_AutoComplete)
-        val settingsInputLayout = findViewById<TextInputLayout>(R.id.settings_input)
 
         // List of client names for the dropdown
         val settingsOptions = listOf("Новый клиент", "Новый тип")
@@ -98,8 +102,12 @@ class MainActivity : AppCompatActivity() {
         settingsAutoComplete.setAdapter(adap_settings)
 
         // Set an OnClickListener to open the dropdown when clicked
-        settingsAutoComplete.setOnClickListener {
-            settingsAutoComplete.showDropDown()  // Manually show the dropdown
+        settingsAutoComplete.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                settingsAutoComplete.showDropDown()
+
+            }
+            true
         }
 
         settingsAutoComplete.setOnItemClickListener { parent, view, position, id ->
