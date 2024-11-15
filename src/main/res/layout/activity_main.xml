@@ -8,14 +8,37 @@
     android:background="#3C3C3C"
     tools:context=".MainActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/settings_input"
+        android:layout_width="105dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="46.5dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activityButton"
+        app:layout_constraintTop_toBottomOf="@+id/addButton">
+
+        <AutoCompleteTextView
+            android:id="@+id/settings_AutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edit_text_orange"
+            android:fontFamily="@font/raleway_regular"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="Настроки"
+            android:textColor="#3C3C3C"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/companyName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway_regular"
+        android:fontFamily="@font/raleway_bold"
         android:text="Название компании"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,63 +46,77 @@
         app:layout_constraintVertical_bias="0.091" />
 
     <EditText
-        android:id="@+id/sumInput"
-        android:layout_width="260dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:fontFamily="@font/raleway_regular"
-        android:hint="Сумма"
-        android:inputType="text"
-        android:paddingLeft="10dp"
-        android:textColorHint="#8D97A0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/type_input" />
-
-    <EditText
+        android:background="@drawable/rounded_edit_text_white"
         android:id="@+id/descriptionInput"
-        android:layout_width="260dp"
-        android:layout_height="30dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:background="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/raleway_regular"
         android:hint="Описание"
         android:inputType="text"
-        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:textColorHint="#8D97A0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sumInput" />
 
-    <Button
-        android:id="@+id/addButton3"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/orange"
-        android:fontFamily="@font/raleway_regular"
-        android:gravity="center"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="Добавить"
-        android:textColor="#3C3C3C"
-        app:cornerRadius="5dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/client_input"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionInput" />
+        app:layout_constraintTop_toBottomOf="@+id/companyName">
+
+        <AutoCompleteTextView
+            android:id="@+id/client_AutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edit_text_white"
+            android:fontFamily="@font/raleway_regular"
+            android:inputType="none"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Клиенты"
+            android:textColor="#8D97A0" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/report_input"
+        android:layout_width="105dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="46.5dp"
+        app:layout_constraintEnd_toStartOf="@+id/activityButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton">
+
+        <AutoCompleteTextView
+            android:id="@+id/report_AutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edit_text_orange"
+            android:fontFamily="@font/raleway_regular"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="Отчет"
+            android:textColor="#3C3C3C"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/type_input"
-        android:layout_width="260dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/client_input">
 
@@ -88,57 +125,72 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="@drawable/rounded_edit_text_white"
             android:fontFamily="@font/raleway_regular"
             android:gravity="center_vertical"
             android:inputType="none"
-            android:paddingLeft="10dp"
-            android:text="Types"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Типы"
             android:textColor="#8D97A0" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/client_input"
-        android:layout_width="260dp"
-        android:layout_height="37dp"
+    <EditText
+        android:background="@drawable/rounded_edit_text_white"
+        android:id="@+id/sumInput"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/raleway_regular"
+        android:hint="Сумма"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#8D97A0"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/companyName">
+        app:layout_constraintTop_toBottomOf="@+id/type_input" />
 
-        <AutoCompleteTextView
-            android:id="@+id/client_AutoComplete"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF"
-            android:fontFamily="@font/raleway_regular"
-            android:inputType="none"
-            android:text="Clients"
-            android:textColor="#8D97A0"
-            tools:paddingLeft="10dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/report_input"
-        android:layout_width="98dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="20dp"
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/raleway_regular"
+        android:gravity="center"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Добавить"
+        android:textColor="#3C3C3C"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addButton3">
+        app:layout_constraintTop_toBottomOf="@+id/descriptionInput" />
 
-        <AutoCompleteTextView
-            android:id="@+id/report_AutoComplete"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/orange"
-            android:fontFamily="@font/raleway_regular"
-            android:gravity="center"
-            android:text="Отчет"
-            android:inputType="none"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/activityButton"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/raleway_regular"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Активности"
+        android:textColor="@color/dark"
+        android:textSize="12sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settings_input"
+        app:layout_constraintStart_toEndOf="@+id/report_input"
+        app:layout_constraintTop_toBottomOf="@+id/addButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
