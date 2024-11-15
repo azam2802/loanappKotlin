@@ -3482,7 +3482,9 @@ int id progress_horizontal 0x7f0a016d
 int id radio 0x7f0a016e
 int id ratio 0x7f0a016f
 int id rectangles 0x7f0a0170
+int id report_AutoComplete 0x7f0a0203
 int id report_drawn 0x7f0a0171
+int id report_input 0x7f0a0204
 int id reverseSawtooth 0x7f0a0172
 int id right 0x7f0a0173
 int id rightToLeft 0x7f0a0174
@@ -3742,6 +3744,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
+int layout activity_debt 0x7f0d006d
 int layout activity_main 0x7f0d001c
 int layout custom_dialog 0x7f0d001d
 int layout design_bottom_navigation_item 0x7f0d001e

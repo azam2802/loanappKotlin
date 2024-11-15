@@ -111,12 +111,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
+            android:fontFamily="@font/raleway_regular"
             android:inputType="none"
             android:text="Clients"
             android:textColor="#8D97A0"
-            tools:paddingLeft="10dp"
+            tools:paddingLeft="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/report_input"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton3">
+
+        <AutoCompleteTextView
+            android:id="@+id/report_AutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
             android:fontFamily="@font/raleway_regular"
-            />
+            android:gravity="center"
+            android:text="Отчет"
+            android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

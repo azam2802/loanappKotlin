@@ -1,5 +1,7 @@
 package com.example.design1
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
@@ -10,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -55,6 +58,39 @@ class MainActivity : AppCompatActivity() {
         clientAutoComplete.setOnItemClickListener { parent, view, position, id ->
             val selectedClient = parent.getItemAtPosition(position) as String
             // Handle the selected client here
+        }
+
+        val reportAutoComplete = findViewById<AutoCompleteTextView>(R.id.report_AutoComplete)
+        val reportInputLayout = findViewById<TextInputLayout>(R.id.report_input)
+
+        // List of client names for the dropdown
+        val reportOptions = listOf("Должники", "Сумма по типу", "Прибыль", "Этот месяц", "Погашено", "Кредит")
+
+        // Create the ArrayAdapter and set it for the AutoCompleteTextView
+        val adap_report = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, reportOptions)
+        reportAutoComplete.setAdapter(adap_report)
+
+        // Set an OnClickListener to open the dropdown when clicked
+        reportAutoComplete.setOnClickListener {
+            reportAutoComplete.showDropDown()  // Manually show the dropdown
+        }
+
+        // Optionally set an item click listener to handle item selection
+        reportAutoComplete.setOnItemClickListener { parent, view, position, id ->
+            val selectedReport = parent.getItemAtPosition(position) as String
+            when (selectedReport) {
+                "Должники" -> {
+                    // Navigate to DebtorsActivity
+                    val intent = Intent(this, Debt::class.java)
+                    startActivity(intent)
+                }
+//                "Сумма по типу" -> {
+//                    // Navigate to another Activity (if needed)
+//                    val intent = Intent(this, AnotherActivity::class.java)
+//                    startActivity(intent)
+//                }
+                // Add more cases as needed
+            }
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

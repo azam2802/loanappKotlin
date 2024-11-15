@@ -15,10 +15,13 @@ id client_input
 id companyName
 id descriptionInput
 id main
+id report_AutoComplete
+id report_input
 id sumInput
 id textView
 id type_autoComplete
 id type_input
+layout activity_debt
 layout activity_main
 layout types_dropdown
 mipmap ic_launcher

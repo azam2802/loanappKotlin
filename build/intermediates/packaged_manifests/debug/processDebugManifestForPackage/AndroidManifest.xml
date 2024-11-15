@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Design1" >
         <activity
+            android:name="com.example.design1.Debt"
+            android:exported="false" />
+        <activity
             android:name="com.example.design1.MainActivity"
             android:exported="true" >
             <intent-filter>
