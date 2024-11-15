@@ -75,22 +75,12 @@ class MainActivity : AppCompatActivity() {
             reportAutoComplete.showDropDown()  // Manually show the dropdown
         }
 
-        // Optionally set an item click listener to handle item selection
         reportAutoComplete.setOnItemClickListener { parent, view, position, id ->
             val selectedReport = parent.getItemAtPosition(position) as String
-            when (selectedReport) {
-                "Должники" -> {
-                    // Navigate to DebtorsActivity
-                    val intent = Intent(this, Debt::class.java)
-                    startActivity(intent)
-                }
-//                "Сумма по типу" -> {
-//                    // Navigate to another Activity (if needed)
-//                    val intent = Intent(this, AnotherActivity::class.java)
-//                    startActivity(intent)
-//                }
-                // Add more cases as needed
-            }
+            // Navigate to DebtorsActivity
+            val intent = Intent(this, Debt::class.java)
+            intent.putExtra("selected_report", selectedReport)
+            startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
