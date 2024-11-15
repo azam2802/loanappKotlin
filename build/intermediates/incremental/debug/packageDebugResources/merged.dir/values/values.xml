@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="types">
+        <item>Hello</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Bye</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="orange">#FEB13C</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Design1</string>
+    <style name="Base.Theme.Design1" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Design1" parent="Base.Theme.Design1"/>
+</resources>

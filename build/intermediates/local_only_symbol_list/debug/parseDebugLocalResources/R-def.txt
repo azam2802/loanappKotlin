@@ -10,12 +10,12 @@ font raleway_italic
 font raleway_regular
 font raleway_variable
 id addButton3
+id client_AutoComplete
+id client_input
 id companyName
 id descriptionInput
 id main
-id reportButton
 id sumInput
-id textInputLayout
 id textView
 id type_autoComplete
 id type_input

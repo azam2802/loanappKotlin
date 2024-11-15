@@ -8,13 +8,6 @@
     android:background="#3C3C3C"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-46dp"
-        tools:layout_editor_absoluteY="0dp" />
-
     <TextView
         android:id="@+id/companyName"
         android:layout_width="wrap_content"
@@ -39,9 +32,10 @@
         android:fontFamily="@font/raleway_regular"
         android:hint="Сумма"
         android:inputType="text"
+        android:paddingLeft="10dp"
         android:textColorHint="#8D97A0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type_input" />
 
@@ -55,33 +49,17 @@
         android:fontFamily="@font/raleway_regular"
         android:hint="Описание"
         android:inputType="text"
+        android:paddingLeft="10dp"
         android:textColorHint="#8D97A0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sumInput" />
 
     <Button
-        android:id="@+id/reportButton"
-        android:layout_width="151dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/orange"
-        android:fontFamily="@font/raleway_regular"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="Отчет"
-        android:textColor="#3C3C3C"
-        app:cornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addButton3" />
-
-    <Button
         android:id="@+id/addButton3"
-        android:layout_width="151dp"
-        android:layout_height="49dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/orange"
         android:fontFamily="@font/raleway_regular"
@@ -98,12 +76,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/type_input"
         android:layout_width="260dp"
-        android:layout_height="30dp"
-
-        android:layout_marginTop="20dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/companyName">
+        app:layout_constraintTop_toBottomOf="@+id/client_input">
 
         <AutoCompleteTextView
             android:id="@+id/type_autoComplete"
@@ -112,7 +90,33 @@
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:inputType="none"
-            android:text="Types" />
+            android:paddingLeft="10dp"
+            android:text="Types"
+            android:textColor="#8D97A0"
+            android:fontFamily="@font/raleway_regular"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/client_input"
+        android:layout_width="260dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyName">
+
+        <AutoCompleteTextView
+            android:id="@+id/client_AutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:inputType="none"
+            android:text="Clients"
+            android:textColor="#8D97A0"
+            tools:paddingLeft="10dp"
+            android:fontFamily="@font/raleway_regular"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3234,6 +3234,8 @@ id checked
 id chronometer
 id circle_center
 id clear_text
+id client_AutoComplete
+id client_input
 id clip_horizontal
 id clip_vertical
 id clockwise
@@ -3481,7 +3483,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id reportButton
 id report_drawn
 id reverseSawtooth
 id right
@@ -3569,7 +3570,6 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
-id textInputLayout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
