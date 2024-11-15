@@ -33,11 +33,11 @@ class MainActivity : AppCompatActivity() {
             autoCompleteTextView.showDropDown()  // Manually show the dropdown
         }
 
-        // Optionally set an item click listener to handle item selection
-        autoCompleteTextView.setOnItemClickListener { parent, view, position, id ->
-            val selectedOption = parent.getItemAtPosition(position) as String
-            // Handle the selected item here
-        }
+//        // Optionally set an item click listener to handle item selection
+//        autoCompleteTextView.setOnItemClickListener { parent, view, position, id ->
+//            val selectedOption = parent.getItemAtPosition(position) as String
+//            // Handle the selected item here
+//        }
 
         val clientAutoComplete = findViewById<AutoCompleteTextView>(R.id.client_AutoComplete)
         val clientInputLayout = findViewById<TextInputLayout>(R.id.client_input)
@@ -54,11 +54,11 @@ class MainActivity : AppCompatActivity() {
             clientAutoComplete.showDropDown()  // Manually show the dropdown
         }
 
-        // Optionally set an item click listener to handle item selection
-        clientAutoComplete.setOnItemClickListener { parent, view, position, id ->
-            val selectedClient = parent.getItemAtPosition(position) as String
-            // Handle the selected client here
-        }
+//        // Optionally set an item click listener to handle item selection
+//        clientAutoComplete.setOnItemClickListener { parent, view, position, id ->
+//            val selectedClient = parent.getItemAtPosition(position) as String
+//            // Handle the selected client here
+//        }
 
         val reportAutoComplete = findViewById<AutoCompleteTextView>(R.id.report_AutoComplete)
         val reportInputLayout = findViewById<TextInputLayout>(R.id.report_input)
