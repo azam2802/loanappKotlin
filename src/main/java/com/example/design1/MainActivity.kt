@@ -83,6 +83,35 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val settingsAutoComplete = findViewById<AutoCompleteTextView>(R.id.settings_AutoComplete)
+        val settingsInputLayout = findViewById<TextInputLayout>(R.id.settings_input)
+
+        // List of client names for the dropdown
+        val settingsOptions = listOf("Новый клиент", "Новый тип")
+
+        // Create the ArrayAdapter and set it for the AutoCompleteTextView
+        val adap_settings = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, settingsOptions)
+        settingsAutoComplete.setAdapter(adap_settings)
+
+        // Set an OnClickListener to open the dropdown when clicked
+        settingsAutoComplete.setOnClickListener {
+            settingsAutoComplete.showDropDown()  // Manually show the dropdown
+        }
+
+        settingsAutoComplete.setOnItemClickListener { parent, view, position, id ->
+            val selectedSettings = parent.getItemAtPosition(position) as String
+            when (selectedSettings) {
+                "Новый клиент" -> {
+                    val intent = Intent(this, NewClient::class.java)
+                    startActivity(intent)
+                }
+                "Новый тип" -> {
+                    val intent = Intent(this, NewType::class.java)
+                    startActivity(intent)
+                }
+            }
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

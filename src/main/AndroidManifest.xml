@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Design1"
         tools:targetApi="31">
         <activity
+            android:name=".NewType"
+            android:exported="false" />
+        <activity
             android:name=".NewClient"
             android:exported="false" />
         <activity

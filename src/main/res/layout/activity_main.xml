@@ -47,7 +47,7 @@
 
     <EditText
         android:background="@drawable/rounded_edit_text_white"
-        android:id="@+id/descriptionInput"
+        android:id="@+id/monthsInput"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sumInput" />
+        app:layout_constraintTop_toBottomOf="@+id/paymentDay" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/client_input"
@@ -137,7 +137,7 @@
 
     <EditText
         android:background="@drawable/rounded_edit_text_white"
-        android:id="@+id/sumInput"
+        android:id="@+id/paymentDay"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -170,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionInput" />
+        app:layout_constraintTop_toBottomOf="@+id/monthsInput" />
 
     <Button
         android:id="@+id/activityButton"
